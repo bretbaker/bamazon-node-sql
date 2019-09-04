@@ -31,5 +31,3 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ('headphones', 'electronics', 74.99, 5000);
 
 SELECT * FROM products;
-
-SELECT stock_quantity FROM products WHERE item_id = 4;
