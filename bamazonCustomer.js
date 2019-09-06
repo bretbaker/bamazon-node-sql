@@ -24,8 +24,7 @@ let itemPrice;
 const start = () => {
   connection.query('SELECT * FROM products', (err, result) => {
     if (err) throw err;
-    inquirer
-    .prompt([
+    inquirer.prompt([
       {
         name: 'choice',
         type: 'list',
@@ -38,8 +37,7 @@ const start = () => {
         },
         message: 'Which item would you like to buy?'
       }
-    ])
-    .then(answer1 => {
+    ]).then(answer1 => {
       // console.log(answer1);
       answer1.choice = answer1.choice.split(' ');
       // console.log(answer1.choice);
@@ -49,8 +47,7 @@ const start = () => {
         if (err) throw err;
         stockQuantity = result[0].stock_quantity;
         // console.log(stockQuantity);
-        inquirer
-        .prompt([
+        inquirer.prompt([
           {
             name: 'quantity',
             type: 'input',
@@ -63,8 +60,7 @@ const start = () => {
               return false;
             }
           }
-        ])
-        .then(answer2 => {
+        ]).then(answer2 => {
           // console.log(answer2);
           connection.query('SELECT price FROM products WHERE item_id = ' + itemID, (err, result) => {
             if (err) throw err;
@@ -79,7 +75,8 @@ const start = () => {
             'UPDATE products SET ? WHERE ?',
             [
               {
-                stock_quantity: newQuantity
+                stock_quantity: newQuantity,
+                product_sales: purchaseQuantity * itemPrice
               },
               {
                 item_id: itemID
