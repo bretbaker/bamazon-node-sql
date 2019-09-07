@@ -195,7 +195,8 @@ const start = () => {
             product_name: answer4.product_name,
             department_name: answer4.department_name,
             price: answer4.price,
-            stock_quantity: answer4.stock_quantity
+            stock_quantity: answer4.stock_quantity,
+            product_sales: 0
           },
           (err) => {
             if (err) throw err;
