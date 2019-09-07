@@ -9,5 +9,5 @@ Challenge #1: Customer View (Minimum Requirement)
 - The first app 'bamazonCustomer' does two things: ask the user which item they would like to buy and what quantity of this item they would like to buy
 - If the user tries to buy more units than are available, the app advises them how many units are in stock
 - The app tells the user the total cost of their purchase and updates the database upon transaction completion
-![](https://github.com/bretbaker808/bamazon-nde-sql/blob/master/gifs/gif-1.gif)
+![](https://github.com/bretbaker808/bamazon-node-sql/blob/master/gifs/gif-1.gif)
 
